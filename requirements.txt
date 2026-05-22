@@ -1,29 +1,10 @@
 Django>=5.0,<7.0
-
-# Работа с изображениями
 Pillow
-
-# Excel файлы
 openpyxl
-
-# .env переменные
 python-dotenv
-
-# PostgreSQL
 psycopg2-binary
-
-# DATABASE_URL для Render
 dj-database-url
-
-# Сервер для Render
 gunicorn
-
-# Раздача static файлов
 whitenoise
-
-# Для корректной работы timezone
-tzdata
-
-# ASGI/Django зависимости
-asgiref
-sqlparse
+cloudinary
+django-cloudinary-storage
