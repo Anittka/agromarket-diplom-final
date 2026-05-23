@@ -3878,3 +3878,159 @@ body[data-page="/catalog/"] main {
     height: 280px !important;
   }
 }
+/* =========================================
+   MOBILE FIXES
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* =========================
+       HEADER / BURGER
+    ========================= */
+
+    .header,
+    header {
+        position: relative;
+        z-index: 1000;
+    }
+
+    .burger,
+    .burger-btn,
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 1200;
+    }
+
+    .mobile-menu,
+    .nav-menu,
+    .header-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 85%;
+        height: 100vh;
+
+        background: #fff;
+
+        display: flex;
+        flex-direction: column;
+
+        padding: 90px 25px 30px;
+
+        overflow-y: auto;
+
+        transition: 0.3s ease;
+
+        z-index: 1100;
+    }
+
+    .mobile-menu.active,
+    .nav-menu.active,
+    .header-menu.active {
+        right: 0;
+    }
+
+    .mobile-menu a,
+    .nav-menu a,
+    .header-menu a {
+        display: block;
+
+        width: 100%;
+
+        padding: 14px 0;
+
+        border-bottom: 1px solid #e5e5e5;
+
+        font-size: 18px;
+    }
+
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    /* =========================
+       PRODUCT CARD
+    ========================= */
+
+    .product-card,
+    .product-detail,
+    .product-page,
+    .product-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+
+        overflow: hidden;
+    }
+
+    .product-image,
+    .product-photo,
+    .product-gallery,
+    .product-card img,
+    .product-detail img {
+        width: 100%;
+        max-width: 100%;
+
+        height: auto;
+
+        object-fit: contain;
+
+        border-radius: 12px;
+    }
+
+    .product-info,
+    .product-description,
+    .product-content {
+        width: 100%;
+
+        padding: 15px;
+
+        box-sizing: border-box;
+    }
+
+    .product-title,
+    .product-description,
+    .product-text {
+        word-break: break-word;
+    }
+
+    /* =========================
+       GRID FIX
+    ========================= */
+
+    .catalog-grid,
+    .products-grid,
+    .articles-grid {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    /* =========================
+       GENERAL FIXES
+    ========================= */
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .container,
+    .wrapper,
+    .content {
+        width: 100%;
+        max-width: 100%;
+
+        overflow-x: hidden;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
