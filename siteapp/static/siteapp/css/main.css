@@ -4034,3 +4034,181 @@ body[data-page="/catalog/"] main {
         height: auto;
     }
 }
+/* =========================================
+   MOBILE FIX FINAL
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    /* =================================
+       PRODUCT PAGE
+    ================================= */
+
+    .product-page,
+    .product-detail,
+    .product-wrapper,
+    .product-container,
+    .product-main {
+        display: flex !important;
+        flex-direction: column !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        overflow: hidden;
+    }
+
+    .product-gallery,
+    .product-slider,
+    .product-image-block,
+    .product-image {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .product-gallery img,
+    .product-slider img,
+    .product-image img,
+    .product-card img {
+        width: 100% !important;
+        height: auto !important;
+
+        object-fit: contain;
+
+        display: block;
+    }
+
+    .product-info,
+    .product-content,
+    .product-description {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        padding: 15px !important;
+
+        box-sizing: border-box;
+
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+
+    /* =================================
+       BURGER MENU
+    ================================= */
+
+    .mobile-menu,
+    .burger-menu,
+    .header-menu,
+    .nav-menu {
+        position: fixed;
+
+        top: 0;
+        right: -100%;
+
+        width: 85%;
+        height: 100dvh;
+
+        background: #fff;
+
+        z-index: 99999;
+
+        overflow-y: auto;
+
+        padding: 100px 20px 40px;
+
+        transition: right 0.3s ease;
+    }
+
+    .mobile-menu.active,
+    .burger-menu.active,
+    .header-menu.active,
+    .nav-menu.active {
+        right: 0;
+    }
+
+    /* =================================
+       MODAL / FORM
+    ================================= */
+
+    .modal,
+    .popup,
+    .request-modal,
+    .application-modal {
+        position: fixed !important;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100dvh;
+
+        overflow-y: auto !important;
+
+        padding: 20px;
+
+        box-sizing: border-box;
+
+        z-index: 999999;
+    }
+
+    .modal-content,
+    .popup-content,
+    .request-form,
+    .application-form {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        max-height: none !important;
+
+        overflow: visible !important;
+
+        margin: auto;
+    }
+
+    /* =================================
+       BUTTONS
+    ================================= */
+
+    button,
+    .btn,
+    .product-btn {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* =================================
+       SEARCH
+    ================================= */
+
+    .search,
+    .search-form,
+    .search-input {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* =================================
+       CATALOG
+    ================================= */
+
+    .catalog-grid,
+    .products-grid,
+    .catalog-list {
+        display: grid !important;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 20px;
+    }
+
+}
